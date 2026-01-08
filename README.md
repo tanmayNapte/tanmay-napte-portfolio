@@ -12,7 +12,9 @@ https://tanmay-napte-portfolio.vercel.app
 - Skills section
 
 ## 🛠️ Built With
-HTML5 | CSS3 | JavaScript
+- React (Vite)
+- Tailwind CSS
+- Framer Motion
 
 ## 📫 Contact
 Email: tanmaynapte232@gmail.com
