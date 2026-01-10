@@ -21,7 +21,7 @@ const Footer = () => {
               </span>
             </div>
             <p className="text-muted text-sm">
-              Python Backend Developer focused on practical web applications
+              Python backend dev. I build projects end-to-end — from database design to deployment.
             </p>
           </motion.div>
 

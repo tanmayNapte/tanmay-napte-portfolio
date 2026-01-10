@@ -132,10 +132,11 @@ const Hero = () => {
 
           <motion.p
             variants={childVariants}
-            className="text-muted text-lg md:text-xl mb-10 max-w-xl"
+            className="text-muted text-base md:text-lg mb-10 max-w-xl leading-7"
           >
             Solving real-world problems through innovative solutions.
             Eager to apply technical expertise and creativity in dynamic environments.
+            I enjoy working on problems where data consistency and edge cases actually matter.
           </motion.p>
 
           {/* Social media and resume section */}

@@ -6,45 +6,50 @@ const Projects = () => {
 
   const projects = [
     {
+      title: "Smart Shared Expense Tracker",
+      description:
+        "A backend-focused group expense tracking system inspired by real-world shared finance problems. The application manages users, groups, expenses, and settlements while ensuring balance consistency across transactions. Built to handle edge cases like invalid settlements and duplicate entries, this project reflects real backend decision-making rather than simple CRUD. This project is still evolving as I explore better validation and scaling approaches, such as optimizing balance recalculation logic and improving database queries as group size grows.",
+
+      tech: ["Python", "Flask", "SQLAlchemy", "PostgreSQL"],
+      image: "/images/expense-tracker-preview.png",
+      liveLink: "https://github.com/tanmayNapte/Smart-shared-expence-tracker",
+      liveDemo: "https://smart-shared-expence-tracker.onrender.com",
+      highlights: [
+        "Group-based expense and settlement management",
+        "Automatic balance calculation with validations",
+        "Handled edge cases like self-pay and duplicate settlements",
+        "Login-protected routes and role-based checks",
+      ],
+    },
+
+    {
       title: "Student Management System",
       description:
-        "A backend-focused web application built to manage student records and attendance. The system implements authentication, protected routes, and CRUD operations while maintaining clean data flow between forms, backend logic, and the database. The project was developed to understand real-world backend structure and relational data handling.",
+        "A backend-oriented web application for managing student records and attendance. The system focuses on authentication, protected routes, and structured CRUD operations with a relational database. Built to understand how real backend flows connect forms, business logic, and persistent data.",
       tech: ["Python", "Flask", "SQL", "HTML", "CSS"],
       image: "/images/student-management-preview.png",
       liveLink: "https://github.com/tanmayNapte/Student-Management-System",
+      liveDemo: "https://student-management-system-xed5.onrender.com",
       highlights: [
-        "User authentication and login-protected routes",
-        "Create, update, and delete student records",
-        "Attendance management",
-        "Relational database integration",
+        "User authentication with protected routes",
+        "Student record and attendance management",
+        "Relational database handling",
+        "Clean separation of backend logic",
       ],
     },
+
     {
       title: "Task Management System",
       description:
-        "A Django-based task management application that allows users to create and manage personal tasks. The project emphasizes Django ORM usage, session-based authentication, and structured backend logic. It was built to gain hands-on experience with Django’s request-response cycle and database abstraction.",
+        "A Django-based task management application built to understand Django’s request–response cycle and ORM abstraction. The project implements session-based authentication and standard task operations while maintaining a clean and structured backend flow.",
       tech: ["Python", "Django", "SQLite", "HTML", "CSS", "Bootstrap"],
       image: "/images/task-manager-preview.png",
       liveLink: "https://github.com/tanmayNapte/Task-Management-System",
       highlights: [
-        "User authentication and session handling",
+        "Session-based authentication",
         "Task creation, update, and deletion",
-        "Django ORM for database operations",
-        "Clean backend structure",
-      ],
-    },
-    {
-      title: "Smart Expense Tracker",
-      description:
-        "A group-based expense tracking system designed to simplify shared expense management. The application calculates balances, handles settlements between users, and enforces backend validations to maintain data consistency. This project strengthened understanding of relational models and edge-case handling.",
-      tech: ["Python", "Flask", "SQLAlchemy", "PostgreSQL"],
-      image: "/images/expense-tracker-preview.png",
-      liveLink: "https://github.com/tanmayNapte/Smart-shared-expence-tracker ",
-      highlights: [
-        "Group-based expense tracking",
-        "Automatic balance calculation",
-        "Settlement handling",
-        "Login-protected backend routes",
+        "Hands-on use of Django ORM",
+        "Structured backend views and models",
       ],
     },
   ];
@@ -78,6 +83,7 @@ const Projects = () => {
           <h2 className="text-2xl md:text-4xl font-bold mb-4">
             Featured Projects
           </h2>
+          <p>|Focused on backend systems, data consistency, and real-world problem solving.</p>
           <div className="w-16 h-[2px] bg-light opacity-50"></div>
         </motion.div>
 
@@ -215,27 +221,50 @@ const Projects = () => {
               </div>
 
               {projects[activeProject].liveLink && (
-                <div className="mt-6 md:mt-8 flex justify-center md:justify-end">
+                <div className="mt-6 md:mt-8 flex justify-center md:justify-end gap-4">
+                  {/* VIEW PROJECT */}
                   <a
                     href={projects[activeProject].liveLink}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="font-mono text-xs inline-flex items-center px-5 py-2 md:px-6 md:py-2 border border-light hover:bg-light hover:bg-opacity-5 transition-all duration-300 group"
                   >
-                    VIEW PROJECT
+                    SOURCE CODE
                     <svg
                       className="ml-2 w-3 h-3 md:w-4 md:h-4 group-hover:translate-x-1 transition-transform"
                       fill="none"
                       stroke="currentColor"
                       viewBox="0 0 24 24"
-                      xmlns="http://www.w3.org/2000/svg"
                     >
                       <path
                         strokeLinecap="round"
                         strokeLinejoin="round"
                         strokeWidth="1"
                         d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
-                      ></path>
+                      />
+                    </svg>
+                  </a>
+
+                  {/* LIVE DEMO */}
+                  <a
+                    href={projects[activeProject].liveDemo} // 👈 paste live demo URL in project data
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="font-mono text-xs inline-flex items-center px-5 py-2 md:px-6 md:py-2 border border-light hover:bg-light hover:bg-opacity-5 transition-all duration-300 group"
+                  >
+                    LIVE DEMO
+                    <svg
+                      className="ml-2 w-3 h-3 md:w-4 md:h-4 group-hover:translate-x-1 transition-transform"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth="1"
+                        d="M14 4h6m0 0v6m0-6L10 14M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4"
+                      />
                     </svg>
                   </a>
                 </div>

@@ -94,11 +94,11 @@ body {
 }
 
 .role-text {
-  font-family: 'JetBrains Mono', monospace;
-  font-size: 3.0rem;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 3.5rem;
   font-weight: 500;
-  letter-spacing: 0.08em;
-  color: #bdbdbd;
+  letter-spacing: 0.05em;
+  color: #979797;
   margin-top: 0.75rem;
 }
 
